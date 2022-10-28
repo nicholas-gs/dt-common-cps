@@ -19,7 +19,7 @@ __all__ = [
     'Point',
     'GroundPoint',
     'ImageSpaceResdepPoint',
-    'ImageSpaceNormalizedPoint'
+    'ImageSpaceNormalizedPoint',
     'GroundProjectionGeometry'
 ]
 
