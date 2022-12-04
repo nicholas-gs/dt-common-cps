@@ -2,7 +2,6 @@ import os
 import time
 import yaml
 
-from os.path import expanduser
 from typing import Any, Tuple, Optional
 
 
@@ -12,8 +11,7 @@ __all__ = [
 ]
 
 
-HOME_DIR = expanduser("~")
-BASE_DIR = os.path.join(HOME_DIR, ".dt-cps/data/calibrations")
+BASE_DIR = os.environ.get("ROBOT_CALIBRATION_DIR")
 
 
 def save_calibration(rel_file_path, data) -> str:
