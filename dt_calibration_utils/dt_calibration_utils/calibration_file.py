@@ -11,7 +11,11 @@ __all__ = [
 ]
 
 
-BASE_DIR = os.environ.get("ROBOT_CALIBRATION_DIR")
+BASE_DIR = os.environ.get("ROBOT_CALIBRATION_DIR", None)
+
+if BASE_DIR is None:
+    raise RuntimeError("No `ROBOT_CALIBRATION_DIR` environment variable \
+defined.")
 
 
 def save_calibration(rel_file_path, data) -> str:
